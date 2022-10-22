@@ -1,0 +1,227 @@
+body {
+  font-family: "Lato";
+  color: #424551;
+  background-color: #eee;
+}
+
+[class*="__container"] {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+/* ==================== */
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+}
+
+/* =============== header =============== */
+
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: yellowgreen;
+  z-index: 100;
+}
+.header__container {
+  padding: 15px;
+  justify-content: space-between;
+  flex-direction: row;
+  text-transform: uppercase;
+  background-color: rgb(33, 173, 124);
+}
+.header__lesson {
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* =============== main =============== */
+
+.main {
+  height: 700px;
+}
+
+.main__container {
+  margin-top: 56px;
+  margin-bottom: 25px;
+}
+
+.block {
+  padding: 20px;
+  height: 300px;
+}
+
+.block > *:not(:last-child) {
+  margin-bottom: 45px;
+}
+
+/* =============== */
+
+/*
+ transition: <property> <duration> <timing-function> <delay>; 
+*/
+
+/* =============== */
+
+.block__box {
+  display: block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+  background-color: #0000ff;
+
+  /* transition-duration: 2s, 2s;
+  transition-property: width, height, background-color,  transform;
+  transition-delay: 2s;
+  transition-timing-function: ease;    */
+
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.block__box:hover {
+  background-color: yellow;
+  width: 150px;
+  height: 150px;
+  color: black;
+  transform: rotate(180deg);
+}
+
+/* ==== */
+
+.block__buttom {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 15px;
+  position: relative;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: #5e5373;
+  box-shadow: 0 5px 0px #5d7997;
+  transition-duration: 1s;
+}
+
+.block__buttom:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* ==== Завдання 1 ==== */
+
+.block__text {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+  background-color: #0000ff;
+}
+
+.block__element {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+  opacity: 0;
+}
+
+.block__test:hover .block__element {
+  transform: translate(100px);
+  transition-duration: 3s;
+  transition-property: all;
+  transition-delay: 1s;
+  transition-timing-function: linear;
+  /* transition: all 3s linear 1s; */
+  background-color: yellow;
+  opacity: 1;
+}
+
+/* ==== Завдання 2 ==== */
+
+.block__keyframes {
+}
+
+.block__title {
+  font-weight: 700;
+  line-height: 1.5;
+  animation-name: title;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+@keyframes title {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.block__subtext {
+  font-weight: 700;
+  line-height: 1.5;
+  animation-name: subtext;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-delay: 15s;
+}
+@keyframes subtext {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    /* transform: rotate(360deg) */
+  }
+  
+}
+
+/* ==== */
+
+/* ==== */
+
+/* ==== */
+
+/* ==== */
+
+/* =============== footer =============== */
+
+.footer {
+  background-color: rgb(60, 179, 187);
+}
+
+.footer__container {
+  padding: 15px;
+  justify-content: space-between;
+  flex-direction: row;
+  text-transform: uppercase;
+  background-color: rgb(33, 173, 124);
+}
+
+.footer__lesson {
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
